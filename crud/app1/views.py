@@ -3,7 +3,8 @@ from .models import Employee
 
 # Create your views here.
 def crud(request):
-    return render(request, 'crud.html')
+    emp = Employee.objects.all()
+    return render(request, 'crud.html', {'emp':emp})
 
 
 def add_emp(request):
