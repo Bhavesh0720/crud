@@ -7,4 +7,5 @@ class Employee(models.Model):
     address = models.TextField()
     phone = models.IntegerField()
 
-    
+    def __str__(self):
+        return self.name
